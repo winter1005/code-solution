@@ -1,0 +1,18 @@
+/*solution for reverse a integer*/
+public class Solution{
+  public int reverseInt(int x){
+    long y = x;
+    int sign = x>0?1:-1;
+    if (sign == -1) {
+      y=y*(-1);
+    }
+    long ans = 0;
+    while(y>0){
+      int digit = y%10;
+      ans = ans*10 + digit;
+      if (ans < Integer.MIN_VALUE || ans > Integer.MAX_VALUE) return 0;
+      y = y/10;
+    }
+    return (int)ans*sign;
+  }
+}
