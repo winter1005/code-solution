@@ -1,0 +1,15 @@
+/*determin whether a number is palindrome*/
+public class Solution{
+  public boolean isPalindrome(int num){
+    if(num < 0) return false;
+    long x = num;
+    long reverse = 0;
+    while(x !=0){
+      long digit = x%10;
+      reverse = reverse*10 + digit;
+      x = x/10;
+    }
+    if (reverse == num) return true;
+    return false;
+  }
+}
