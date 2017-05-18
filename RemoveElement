@@ -1,0 +1,13 @@
+/*remove a element from an array*/
+public class Solution{
+  public int removeElement(int[] nums, int value){
+    for(int i=0; i<nums.length; i++){
+      int index = 0;
+      if(nums[i] != value){
+        nums[index] = nums[i];
+        index++;
+      }
+    }
+    return index;
+  }
+}
