@@ -1,0 +1,10 @@
+/*remove duplicates from a int array*/
+public class Solution{
+  public int removeDuplicate(int[] nums) {
+    Set set = new HashSet<>();
+    for(int i=0;i<nums.length;i++){
+      set.add(nums[i]);
+    }
+    return set;
+  }
+}
