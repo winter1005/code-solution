@@ -1,0 +1,18 @@
+/*search a insert position*/
+public class Solution{
+	public int searchInsertPosition(int[] nums, int value){
+		if(nums.length == null || nums == null) return -1;
+		if(target > nums[nums.length-1]) return nums.length;
+		int i=0;
+		int j=nums.length;
+		while(i < j){
+			int mid = (i+j)/2;
+			if(target > nums[mid]) {
+				i= mid + 1;
+			} else {
+				j = mid;
+			}
+		}
+		return j;
+	}
+}
